@@ -5,18 +5,37 @@ const Navbar = () => {
 
     return (
         <>
-            <table className="nav">
-                <tbody>
-                    <tr>
-                        <td>
-                            <Link to="/">Home</Link>
-                        </td>
-                        <td>
-                            <Link to="/about">About Us</Link>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className='row'>
+                <div className='column'>
+                    <Link to="/">
+                        <div className='nav'>
+                            Home
+                        </div>
+                    </Link>
+                </div>
+                <div className='column'>
+                    <Link to="/about">
+                        <div className='nav'>
+                            About Us
+                        </div>
+                    </Link>
+                </div>
+                <div className='column'>
+                    <Link to="/market">
+                        <div className='nav'>
+                            Market
+                        </div>
+                    </Link>
+                </div>
+                <div className='column'>
+                    <Link to="/portfolio">
+                        <div className='nav'>
+                            Portfolio
+                        </div>
+                    </Link>
+                </div>
+            </div>
+                
         </>
     );
 };

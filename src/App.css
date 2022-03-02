@@ -5,15 +5,60 @@
   --brown: #c29872;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Float columns side by side */
+.column {
+  float: left;
+  width: 10%;
+  padding: 0 10px;
 }
 
-.nav div {
-  width: 100px;
-  height: 100px;
+.row {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.nav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--brown);
+}
+
+/* selected link */
+a:active {
+  color: var(--pink);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

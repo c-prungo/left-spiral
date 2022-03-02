@@ -8,6 +8,8 @@ import {
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import Market from "./pages/Market";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Switch>
         <Route path='/' exact element={<Home/>} />
         <Route path='/about' element={<AboutUs/>} />
+        <Route path='/market' element={<Market/>} />
+        <Route path='/portfolio' element={<Portfolio/>} />
       </Switch>
     </Router>
   );
