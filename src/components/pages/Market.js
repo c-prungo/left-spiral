@@ -2,7 +2,7 @@ import React from 'react';
 
 const Market = () => {
     return (
-        <div>
+        <div className='page'>
             <h3>Market</h3>
             <div>
                 Market
