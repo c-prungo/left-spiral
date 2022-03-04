@@ -12,8 +12,9 @@ function Navbar(props) {
     const portfolio = '/portfolio';
 
     let id = find_link(window.location.href);
-    if (id != about && id != market && id != portfolio) {id = home}
-    const [active, setActive] = useState(id[0]);
+    if (id !== null) {id = id[0]}
+    if (id !== about && id !== market && id !== portfolio) {id = home}
+    const [active, setActive] = useState(id);
 
     var nav_bar = (
         <>
