@@ -37,10 +37,10 @@ function Navbar(props) {
         <>
             <div className='nav'>
                 <div className='row'>
-                    {display_navbox(home, 'Home', id, setActive) /* home page */}
-                    {display_navbox(about, 'About Us', id, setActive) /* about us page */}
-                    {display_navbox(market, 'Market', id, setActive) /* market page */}
-                    {display_navbox(portfolio, 'Portfolio', id, setActive) /* portfolio page */}
+                    {display_navbox(home, 'Home', active, setActive) /* home page */}
+                    {display_navbox(about, 'About Us', active, setActive) /* about us page */}
+                    {display_navbox(market, 'Market', active, setActive) /* market page */}
+                    {display_navbox(portfolio, 'Portfolio', active, setActive) /* portfolio page */}
                 </div>
             </div>
         </>
