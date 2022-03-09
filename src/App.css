@@ -48,12 +48,18 @@
 }
 
 .page {
+  margin: 1%;
   margin-top: 120px;
 }
 
-.info-cards {
+.info-card {
   display: inline-block;
-  margin: 1%;
+  margin: 0.5%;
+}
+
+.image-card {
+  float: left;
+  margin: 1px;
 }
 
 /* unvisited link */
