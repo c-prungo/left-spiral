@@ -1,63 +1,46 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
 
+// get data from the url
 function find_link(id) {
     return id.match('/[a-zA-Z]+$');
 }
 
+// display the specific box (used multiple times in main display)
+function display_navbox(link, display, id, setActive) {
+    const navbox = (
+        <div className='column'>
+            <Link to={link}>
+                <div onClick={() => setActive(link)}
+                className={id === link ? 'navbox navbox-active' : 'navbox'}>
+                    {display}
+                </div>
+            </Link>
+        </div>
+    )
+    return (navbox)
+}
+
+// main navbar function
 function Navbar(props) {
-    const home = '/home';
+    const home = '/';
     const about = '/about';
     const market = '/market';
     const portfolio = '/portfolio';
 
     let id = find_link(window.location.href);
     if (id !== null) {id = id[0]}
-    if (id !== about && id !== market && id !== portfolio) {id = home}
+    else {id = '/'}
     const [active, setActive] = useState(id);
 
     var nav_bar = (
         <>
             <div className='nav'>
                 <div className='row'>
-                    <div className='column'>
-                        <Link to="/">
-                            <div onClick={() => setActive(home)}
-                            className={id === home ? 'navbox navbox-active' : 'navbox'}>
-                                Home
-                            </div>
-                        </Link>
-                    </div>
-                    <div className='column'>
-                        <Link to={about}>
-                            <div onClick={() => setActive(about)}
-                            className={active === about ? 'navbox navbox-active' : 'navbox'}>
-                                About Us
-                            </div>
-                        </Link>
-                    </div>
-                    <div className='column'>
-                        <Link to={market}>
-                            <div onClick={() => setActive(market)}
-                            className={active === market ? 'navbox navbox-active' : 'navbox'}>
-                                Market
-                            </div>
-                        </Link>
-                    </div>
-                    <div className='column'>
-                        <Link to={portfolio}>
-                            <div onClick={() => setActive(portfolio)}
-                            className={active === portfolio ? 'navbox navbox-active' : 'navbox'}>
-                                Portfolio
-                            </div>
-                        </Link>
-                    </div>
-                    <div className='column'>
-                        ID: {id}
-                    </div>
-                    <div className='column'>
-                        ACTIVE: {active}
-                    </div>
+                    {display_navbox(home, 'Home', id, setActive) /* home page */}
+                    {display_navbox(about, 'About Us', id, setActive) /* about us page */}
+                    {display_navbox(market, 'Market', id, setActive) /* market page */}
+                    {display_navbox(portfolio, 'Portfolio', id, setActive) /* portfolio page */}
                 </div>
             </div>
         </>

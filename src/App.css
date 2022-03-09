@@ -42,11 +42,18 @@
 }
 
 .navbox-active {
-  text-decoration: underline !important;
+  text-decoration-line: underline !important;
+  text-decoration-style: double !important;
+  color: var(--brown) !important;
 }
 
 .page {
   margin-top: 120px;
+}
+
+.info-cards {
+  display: inline-block;
+  margin: 1%;
 }
 
 /* unvisited link */
