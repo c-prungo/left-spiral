@@ -5,26 +5,6 @@
   --brown: #c29872;
 }
 
-/* Float columns side by side */
-.column {
-  float: left;
-  width: 10%;
-  padding: 0 10px;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  margin: 1%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 .nav {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 1px;
@@ -36,20 +16,8 @@
   z-index: 1;
 }
 
-.navbox {
-  text-align: center;
-  padding: 10px;
-  font-size: large;
-}
-
-.navbox-active {
-  text-decoration-line: underline !important;
-  text-decoration-style: double !important;
-  color: var(--brown) !important;
-}
-
 .page {
-  padding-top: 120px;
+  padding-top: 90px;
 }
 
 .page.center {
@@ -69,48 +37,4 @@
 .info-card {
   display: inline-block;
   margin: 0.5%;
-}
-
-/* unvisited link */
-a:link {
-  color: black;
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: black;
-}
-
-/* mouse over link */
-a:hover {
-  color: var(--brown);
-}
-
-/* selected link */
-a:active {
-  color: var(--pink);
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
