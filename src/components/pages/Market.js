@@ -8,8 +8,7 @@ import flower4 from '../../resources/flower4.jpg';
 
 const Market = () => {
     return (
-        <div className='page'>
-            <h3>Market</h3>
+        <div className='page market'>
             <div className='info-card'>
                 {InfoCard(flower1, 'Purple', 'Flower info text, should cover multiple lines inside the display card.')}
             </div>

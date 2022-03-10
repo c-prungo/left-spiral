@@ -48,8 +48,7 @@ const Portfolio = () => {
       ];
 
     return (
-        <div className='page'>
-            <h3>Portfolio</h3>
+        <div className='page center portfolio'>
             <div>
                 {HoverInfoImageList(itemData)}
             </div>
